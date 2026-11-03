@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f7f2" />
+    <meta name="description" content="Aprende vocabulario de inglés con retos cortos, pronunciación y progreso." />
+    <title>Wordtrip | Un poco de inglés, todos los días</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#inicio" aria-label="Wordtrip, inicio">
+          <span class="brand-mark" aria-hidden="true">w.</span>
+          <span>wordtrip<span class="brand-period">.</span></span>
+        </a>
+        <div class="topbar-note"><span class="online-dot"></span> TU RATITO DE INGLÉS</div>
+        <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="true" title="Activar o desactivar sonidos">
+          <span aria-hidden="true">♫</span><span id="sound-label">Sonido activo</span>
+        </button>
+      </header>
+
+      <main id="inicio">
+        <section class="intro" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> APRENDE A TU RITMO</p>
+            <h1 id="page-title">A little English.<br /><span>A lot of progress.</span></h1>
+            <p class="intro-copy">Cinco palabras, un nuevo tema y una excusa menos para no practicar.</p>
+          </div>
+          <div class="date-stamp" aria-label="Una práctica breve cada día">
+            <span class="stamp-sun" aria-hidden="true">✳</span>
+            <span><strong>Tu momento</strong><br />empieza ahora</span>
+          </div>
+        </section>
+
+        <section class="lesson-layout" aria-label="Práctica de vocabulario">
+          <div class="lesson-column">
+            <nav class="topic-nav" aria-label="Elige un tema">
+              <span class="topic-label">HOY EXPLORAMOS</span>
+              <div class="topic-tabs" role="group" aria-label="Temas de vocabulario">
+                <button class="topic-tab is-active" type="button" data-topic="travel" aria-pressed="true"><span aria-hidden="true">✈</span> Viajes</button>
+                <button class="topic-tab" type="button" data-topic="food" aria-pressed="false"><span aria-hidden="true">◒</span> Comida</button>
+                <button class="topic-tab" type="button" data-topic="everyday" aria-pressed="false"><span aria-hidden="true">☼</span> Día a día</button>
+              </div>
+            </nav>
+
+            <article class="quiz-card" aria-live="polite">
+              <div class="quiz-topline">
+                <span class="level-tag"><span class="level-dot"></span> NIVEL A2</span>
+                <span class="question-count" id="question-count">PALABRA 01 <span>/ 05</span></span>
+              </div>
+              <div class="progress-track" role="progressbar" aria-label="Progreso de la lección" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0">
+                <span class="progress-fill" id="progress-fill"></span>
+              </div>
+
+              <div class="question-block">
+                <p class="question-label" id="question-label">¿Cómo se dice en inglés?</p>
+                <div class="word-line">
+                  <h2 id="question-word">pasaporte</h2>
+                  <button class="pronounce-button" id="pronounce-button" type="button" aria-label="Escuchar pronunciación" title="Escuchar pronunciación">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15.5 8.5a5 5 0 0 1 0 7m3-10a9 9 0 0 1 0 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  </button>
+                </div>
+                <p class="question-hint" id="question-hint">El documento que necesitas para cruzar una frontera.</p>
+              </div>
+
+              <div class="answer-heading"><span>ELIGE TU RESPUESTA</span><span class="answer-key">4 OPCIONES</span></div>
+              <div class="answer-grid" id="answer-grid"></div>
+              <div class="feedback" id="feedback" role="status" aria-live="polite" hidden></div>
+              <div class="quiz-footer">
+                <span class="keyboard-hint">Confía en tu instinto <span aria-hidden="true">↗</span></span>
+                <button class="next-button" id="next-button" type="button" hidden>Siguiente <span aria-hidden="true">→</span></button>
+              </div>
+            </article>
+          </div>
+
+          <aside class="side-column" aria-label="Tu progreso">
+            <section class="travel-panel">
+              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=960&q=85" alt="Vista de un avión sobre las nubes" />
+              <div class="photo-shade"></div>
+              <div class="travel-panel-copy">
+                <span class="photo-kicker">PASO A PASO,</span>
+                <h2>el mundo<br />se hace más<br /><em>grande.</em></h2>
+                <span class="photo-caption"><span></span> TRAVEL ENGLISH</span>
+              </div>
+              <span class="photo-sticker" aria-hidden="true">✳</span>
+            </section>
+
+            <section class="stats-panel" aria-labelledby="stats-heading">
+              <div class="stats-header">
+                <div><p class="eyebrow">TU RITMO</p><h2 id="stats-heading">Vas muy bien.</h2></div>
+                <span class="stats-spark" aria-hidden="true">↗</span>
+              </div>
+              <div class="stats-row">
+                <div class="stat-item"><span class="stat-value" id="score-value">0</span><span class="stat-label">aciertos hoy</span></div>
+                <span class="stats-divider"></span>
+                <div class="stat-item"><span class="stat-value"><span id="streak-value">0</span><span class="streak-flame">°</span></span><span class="stat-label">racha seguida</span></div>
+              </div>
+              <p class="encouragement" id="encouragement">Cada palabra cuenta. Vamos con la primera.</p>
+            </section>
+          </aside>
+        </section>
+
+        <footer class="page-footer"><span>WORDTRIP <span>·</span> UN PASITO CADA DÍA</span><span>Made for curious minds <span aria-hidden="true">✳</span></span></footer>
+      </main>
+    </div>
+  </body>
+</html>
