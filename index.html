@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f6f7f2" />
-    <meta name="description" content="Aprende vocabulario de inglés con retos cortos, pronunciación y progreso." />
-    <title>Wordtrip | Un poco de inglés, todos los días</title>
+    <meta name="description" content="Practica inglés de 10.º y 11.º con quizzes completos, explicaciones y resultados por área." />
+    <title>Wordtrip | Inglés para 10.º y 11.º</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
@@ -28,9 +28,9 @@
       <main id="inicio">
         <section class="intro" aria-labelledby="page-title">
           <div>
-            <p class="eyebrow"><span class="eyebrow-line"></span> APRENDE A TU RITMO</p>
-            <h1 id="page-title">A little English.<br /><span>A lot of progress.</span></h1>
-            <p class="intro-copy">Cinco palabras, un nuevo tema y una excusa menos para no practicar.</p>
+            <p class="eyebrow"><span class="eyebrow-line"></span> INGLÉS PARA SECUNDARIA</p>
+            <h1 id="page-title">Aprende. Practica.<br /><span>Avanza con confianza.</span></h1>
+            <p class="intro-copy">Entiende los temas, ponlos en práctica y descubre cómo estudiar mejor.</p>
           </div>
           <div class="date-stamp" aria-label="Una práctica breve cada día">
             <span class="stamp-sun" aria-hidden="true">✳</span>
@@ -38,42 +38,114 @@
           </div>
         </section>
 
-        <section class="lesson-layout" aria-label="Práctica de vocabulario">
-          <div class="lesson-column">
-            <nav class="topic-nav" aria-label="Elige un tema">
-              <span class="topic-label">HOY EXPLORAMOS</span>
-              <div class="topic-tabs" role="group" aria-label="Temas de vocabulario">
-                <button class="topic-tab is-active" type="button" data-topic="travel" aria-pressed="true"><span aria-hidden="true">✈</span> Viajes</button>
-                <button class="topic-tab" type="button" data-topic="food" aria-pressed="false"><span aria-hidden="true">◒</span> Comida</button>
-                <button class="topic-tab" type="button" data-topic="everyday" aria-pressed="false"><span aria-hidden="true">☼</span> Día a día</button>
-              </div>
-            </nav>
+        <nav class="learning-nav" role="tablist" aria-label="Secciones del curso">
+          <button class="learning-tab is-active" id="tab-learn" type="button" role="tab" aria-selected="true" aria-controls="learn-view" data-view="learn"><span>01</span> Aprender</button>
+          <button class="learning-tab" id="tab-practice" type="button" role="tab" aria-selected="false" aria-controls="practice-view" data-view="practice"><span>02</span> Practicar</button>
+          <button class="learning-tab" id="tab-methods" type="button" role="tab" aria-selected="false" aria-controls="methods-view" data-view="methods"><span>03</span> Métodos</button>
+        </nav>
 
+        <div class="course-controls">
+          <div>
+            <p class="topic-label">NIVEL ESCOLAR</p>
+            <div class="topic-tabs" role="group" aria-label="Seleccionar grado">
+              <button class="topic-tab is-active" type="button" data-grade="10" aria-pressed="true">10.º grado</button>
+              <button class="topic-tab" type="button" data-grade="11" aria-pressed="false">11.º grado</button>
+            </div>
+          </div>
+          <p class="course-description" id="course-description">Nivel B1 · Gramática, vocabulario, lectura y escritura</p>
+        </div>
+
+        <section id="learn-view" class="app-view" role="tabpanel" aria-labelledby="tab-learn">
+          <div class="learning-layout">
+            <article class="lesson-panel">
+              <div class="module-tabs" role="tablist" aria-label="Unidades de aprendizaje">
+                <button class="module-tab is-active" type="button" role="tab" aria-selected="true" data-module="Gramática">Gramática</button>
+                <button class="module-tab" type="button" role="tab" aria-selected="false" data-module="Vocabulario">Vocabulario</button>
+                <button class="module-tab" type="button" role="tab" aria-selected="false" data-module="Lectura">Lectura</button>
+                <button class="module-tab" type="button" role="tab" aria-selected="false" data-module="Escritura">Escritura</button>
+              </div>
+              <div class="lesson-content">
+                <div class="lesson-meta"><span class="level-tag"><span class="level-dot"></span><span id="lesson-grade">GRADO 10 · B1</span></span><span class="lesson-unit" id="lesson-unit">UNIDAD 01</span></div>
+                <p class="lesson-kicker" id="lesson-kicker">GRAMÁTICA EN CONTEXTO</p>
+                <h2 id="lesson-title">Present perfect</h2>
+                <p class="lesson-description" id="lesson-description"></p>
+                <div class="lesson-rule"><span>FORMA CLAVE</span><p id="lesson-rule"></p></div>
+                <div class="lesson-example"><div><span>EXAMPLE</span><button class="text-audio-button" id="lesson-audio" type="button" aria-label="Escuchar ejemplo">♫</button></div><p id="lesson-example"></p><small id="lesson-translation"></small></div>
+                <div class="lesson-tip"><span aria-hidden="true">✳</span><p id="lesson-tip"></p></div>
+                <section class="guided-activity" aria-labelledby="activity-heading">
+                  <div class="activity-heading"><div><p class="lesson-kicker">PRUEBA RÁPIDA</p><h3 id="activity-heading">Comprueba lo aprendido</h3></div><span class="activity-mark">01</span></div>
+                  <p class="activity-prompt" id="activity-prompt"></p>
+                  <div class="activity-options" id="activity-options"></div>
+                  <p class="activity-feedback" id="activity-feedback" role="status" aria-live="polite" hidden></p>
+                </section>
+              </div>
+            </article>
+            <aside class="study-aside">
+              <section class="study-path-panel">
+                <p class="eyebrow">RUTA DE APRENDIZAJE</p>
+                <h2>Un paso a la vez.</h2>
+                <div class="path-step is-current"><span>1</span><div><strong>Comprende</strong><small>Lee la explicación y el ejemplo.</small></div></div>
+                <div class="path-step"><span>2</span><div><strong>Practica</strong><small>Resuelve la actividad guiada.</small></div></div>
+                <div class="path-step"><span>3</span><div><strong>Comprueba</strong><small>Termina el quiz del grado.</small></div></div>
+                <button class="text-link-button" type="button" data-open-view="practice">Ir al quiz completo <span aria-hidden="true">→</span></button>
+              </section>
+              <section class="mini-vocabulary"><span class="lesson-kicker">PALABRAS ÚTILES</span><div id="lesson-vocabulary"></div></section>
+            </aside>
+          </div>
+        </section>
+
+        <section id="practice-view" class="app-view" role="tabpanel" aria-labelledby="tab-practice" hidden>
+        <div class="lesson-layout" aria-label="Quiz completo de inglés">
+          <div class="lesson-column">
+            <div class="assessment-picker" role="group" aria-label="Seleccionar tipo de prueba">
+              <button class="assessment-tab is-active" type="button" data-assessment="review" aria-pressed="true"><strong>01</strong><span>Repaso<small>10 preguntas</small></span></button>
+              <button class="assessment-tab" type="button" data-assessment="advanced" aria-pressed="false"><strong>02</strong><span>Avanzado<small>10 preguntas</small></span></button>
+              <button class="assessment-tab" type="button" data-assessment="mock" aria-pressed="false"><strong>03</strong><span>Simulacro<small>15 mixtas</small></span></button>
+            </div>
+            <p class="assessment-description" id="assessment-description">Repasa conceptos clave y recibe explicación después de cada respuesta.</p>
             <article class="quiz-card" aria-live="polite">
               <div class="quiz-topline">
-                <span class="level-tag"><span class="level-dot"></span> NIVEL A2</span>
-                <span class="question-count" id="question-count">PALABRA 01 <span>/ 05</span></span>
+                <span class="level-tag"><span class="level-dot"></span> <span id="grade-badge">GRADO 10 · B1</span></span>
+                <span class="question-count" id="question-count">PREGUNTA 01 <span>/ 10</span></span>
               </div>
               <div class="progress-track" role="progressbar" aria-label="Progreso de la lección" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0">
                 <span class="progress-fill" id="progress-fill"></span>
               </div>
 
               <div class="question-block">
-                <p class="question-label" id="question-label">¿Cómo se dice en inglés?</p>
+                <p class="question-label" id="question-label">GRAMÁTICA · ELIGE LA OPCIÓN CORRECTA</p>
                 <div class="word-line">
-                  <h2 id="question-word">pasaporte</h2>
+                  <h2 id="question-word">She ___ at this school since 2022.</h2>
                   <button class="pronounce-button" id="pronounce-button" type="button" aria-label="Escuchar pronunciación" title="Escuchar pronunciación">
                     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15.5 8.5a5 5 0 0 1 0 7m3-10a9 9 0 0 1 0 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
                   </button>
                 </div>
-                <p class="question-hint" id="question-hint">El documento que necesitas para cruzar una frontera.</p>
+                <p class="question-hint" id="question-hint">Completa la oración con el tiempo verbal adecuado.</p>
               </div>
 
-              <div class="answer-heading"><span>ELIGE TU RESPUESTA</span><span class="answer-key">4 OPCIONES</span></div>
+              <section class="reading-context" id="reading-context" aria-label="Texto de lectura" hidden>
+                <span>READING TEXT</span>
+                <p id="reading-text"></p>
+              </section>
+
+              <div class="answer-heading"><span>SELECT THE BEST ANSWER</span><span class="answer-key">4 OPCIONES</span></div>
               <div class="answer-grid" id="answer-grid"></div>
-              <div class="feedback" id="feedback" role="status" aria-live="polite" hidden></div>
+              <section class="explanation-panel" id="explanation-panel" aria-live="polite" hidden>
+                <div class="explanation-heading">
+                  <span class="explanation-icon" id="explanation-icon" aria-hidden="true">✓</span>
+                  <div><span class="explanation-kicker" id="explanation-kicker">¡CORRECTO!</span><h3 id="explanation-title">Present perfect</h3></div>
+                </div>
+                <p class="explanation-body" id="explanation-body"></p>
+                <div class="example-box"><span>EXAMPLE</span><p id="explanation-example"></p><small id="explanation-translation"></small></div>
+              </section>
+              <section class="results-panel" id="results-panel" aria-live="polite" hidden>
+                <span class="results-kicker">RESULTADO FINAL</span>
+                <h2 id="result-score">0/10</h2>
+                <p id="result-message"></p>
+                <div class="results-breakdown" id="results-breakdown"></div>
+              </section>
               <div class="quiz-footer">
-                <span class="keyboard-hint">Confía en tu instinto <span aria-hidden="true">↗</span></span>
+                <span class="keyboard-hint" id="quiz-footer-hint">Lee la explicación: también cuenta como aprendizaje.</span>
                 <button class="next-button" id="next-button" type="button" hidden>Siguiente <span aria-hidden="true">→</span></button>
               </div>
             </article>
@@ -81,12 +153,12 @@
 
           <aside class="side-column" aria-label="Tu progreso">
             <section class="travel-panel">
-              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=960&q=85" alt="Vista de un avión sobre las nubes" />
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=960&q=85" alt="Aula de secundaria con estudiantes aprendiendo" />
               <div class="photo-shade"></div>
               <div class="travel-panel-copy">
-                <span class="photo-kicker">PASO A PASO,</span>
-                <h2>el mundo<br />se hace más<br /><em>grande.</em></h2>
-                <span class="photo-caption"><span></span> TRAVEL ENGLISH</span>
+                <span class="photo-kicker">TU SIGUIENTE PASO</span>
+                <h2>Ideas que<br />te llevan<br /><em>más lejos.</em></h2>
+                <span class="photo-caption"><span></span> LEARN WITH PURPOSE</span>
               </div>
               <span class="photo-sticker" aria-hidden="true">✳</span>
             </section>
@@ -104,6 +176,34 @@
               <p class="encouragement" id="encouragement">Cada palabra cuenta. Vamos con la primera.</p>
             </section>
           </aside>
+        </div>
+        </section>
+
+        <section id="methods-view" class="app-view" role="tabpanel" aria-labelledby="tab-methods" hidden>
+          <div class="methods-layout">
+            <article class="methods-panel">
+              <p class="lesson-kicker">ESTRATEGIAS QUE SÍ FUNCIONAN</p>
+              <h2>Estudiar mejor también se aprende.</h2>
+              <p class="methods-intro">No necesitas memorizar todo de una vez. Alterna práctica, recuerdo activo y descansos para que el inglés se quede contigo.</p>
+              <div class="method-list">
+                <article class="method-item"><span class="method-number">01</span><div><h3>Recuerdo activo</h3><p>Tapa la respuesta e intenta recordarla antes de mirar tus apuntes. El esfuerzo de recuperar una idea fortalece la memoria.</p><small>PRUÉBALO: responde las tarjetas sin voltear de inmediato.</small></div></article>
+                <article class="method-item"><span class="method-number">02</span><div><h3>Repaso espaciado</h3><p>Vuelve al mismo tema hoy, mañana y unos días después. Las sesiones cortas y distribuidas ayudan más que una sola jornada larga.</p><small>PRUÉBALO: repite esta unidad en 1 día y luego en 3 días.</small></div></article>
+                <article class="method-item"><span class="method-number">03</span><div><h3>Intercala habilidades</h3><p>Combina gramática, lectura y vocabulario en una sesión. Cambiar de tipo de reto te enseña a elegir qué herramienta usar.</p><small>PRUÉBALO: alterna una unidad y una pregunta del quiz.</small></div></article>
+                <article class="method-item"><span class="method-number">04</span><div><h3>Escucha y repite</h3><p>Oye una frase, repítela en voz alta e imita su ritmo. Después úsala en una oración propia para conectarla con una idea real.</p><small>PRUÉBALO: escucha el ejemplo de cada lección y repítelo.</small></div></article>
+              </div>
+            </article>
+            <aside class="flashcard-panel">
+              <div class="flashcard-topline"><span class="lesson-kicker">REPASO ACTIVO</span><span id="flashcard-count">TARJETA 01 / 06</span></div>
+              <button class="flashcard" id="flashcard" type="button" aria-label="Voltear tarjeta">
+                <span class="flashcard-face-label" id="flashcard-label">RECUERDA EN INGLÉS</span>
+                <span class="flashcard-word" id="flashcard-word"></span>
+                <span class="flashcard-example" id="flashcard-example"></span>
+                <span class="flashcard-action" id="flashcard-action">Pulsa para revelar <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="flashcard-controls"><button class="flashcard-sound" id="flashcard-sound" type="button" aria-label="Escuchar tarjeta">♫</button><button class="next-button" id="flashcard-next" type="button">Siguiente tarjeta <span aria-hidden="true">→</span></button></div>
+              <p class="flashcard-note">Intenta recordar la respuesta antes de revelarla.</p>
+            </aside>
+          </div>
         </section>
 
         <footer class="page-footer"><span>WORDTRIP <span>·</span> UN PASITO CADA DÍA</span><span>Made for curious minds <span aria-hidden="true">✳</span></span></footer>
